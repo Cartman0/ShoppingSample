@@ -1,0 +1,95 @@
+html, body {
+    width: 100%;
+    background-color: hsl(0, 0%, 97%);
+    font-family: Meiryo, sans-serif;
+}
+
+header {
+    width: 90%;
+    text-align: right;
+    margin:1rem auto;
+}
+
+main {
+    width: 90%;
+    margin:1rem auto;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.title {
+    background-color:  #eee;
+    padding: .2rem;
+    border : .2rem solid #ccc;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+.buttons{
+    display: block;
+    width: 33%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+table.table_form {
+    background: hsl(0, 0%, 97%);
+    padding: .1rem;
+    margin : 1rem auto;
+    border : .2rem solid #ccc;
+}
+
+.shopping_table {   
+    width: 100%;
+    margin: 1rem auto;
+    table-layout: fixed;
+    word-wrap   : break-word;
+    border : .2rem solid #ccc;
+    background-color: hsl(0, 0%, 97%);
+}
+
+th,td {
+    border : .2rem solid #ccc;
+}
+
+.int {
+    text-align: right;
+}
+
+.button {
+    text-align: center;
+}
+
+.list {
+    width  : 90%;
+    margin: 1rem auto;
+}
+
+div.login_pane {
+    background: hsl(0, 0%, 97%);
+    width  : 500px;
+    padding: 1rem;
+    margin : 2rem auto;
+    border : 1px solid #ccc;
+}
+
+.common_button {
+    display: inline-block;
+    font-size : 1rem;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin : 1rem auto;
+    border-radius   : .5rem;
+    background-color: #49a9d4;
+    color: hsl(0, 0%, 97%);
+}

@@ -1,0 +1,49 @@
+@startuml
+title 画面(View)の状態遷移図
+
+'開始'
+[*] --> ログイン画面index.jspログイン前
+
+ ログイン画面index.jspログイン前 --> 商品一覧画面itemList.jsp : ユーザID, パスワードを入力
+
+ログイン画面index.jspログイン後 --> ログイン画面index.jspログイン前:ログアウト
+
+ログイン画面index.jspログイン後 --> 商品一覧画面itemList.jsp: ログイン
+
+
+'ログイン失敗'
+ログイン画面index.jspログイン前 --> ログインエラー画面loginFailed.jsp: ログイン失敗
+
+ログイン画面index.jspログイン後 --> ログインエラー画面loginFailed.jsp: ログイン失敗
+
+'商品一覧画面'
+商品一覧画面itemList.jsp --> ログイン画面index.jspログイン後:戻る
+
+商品一覧画面itemList.jsp -->  ログイン画面index.jspログイン前:ログアウト
+
+商品一覧画面itemList.jsp --> 購入履歴画面history.jsp: 購入履歴
+
+商品一覧画面itemList.jsp --> 購入確認画面purchase_confirm.jsp: 数量と購入を選択
+
+
+'購入確認画面'
+購入確認画面purchase_confirm.jsp --> 商品一覧画面itemList.jsp :一覧に戻る
+
+購入確認画面purchase_confirm.jsp --> ログイン画面index.jspログイン前:ログアウト
+
+購入確認画面purchase_confirm.jsp --> 購入履歴画面history.jsp: 購入履歴
+
+購入確認画面purchase_confirm.jsp --> 購入結果画面result.jsp :購入する
+
+
+'購入結果画面'
+購入結果画面result.jsp --> ログイン画面index.jspログイン前:ログアウト
+
+購入結果画面result.jsp --> 購入履歴画面history.jsp: 購入履歴
+
+購入結果画面result.jsp --> 商品一覧画面itemList.jsp :一覧に戻る
+
+
+
+
+@enduml
